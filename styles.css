@@ -1,0 +1,279 @@
+:root {
+    --bg: #000;
+    --text: #fff;
+    --accent: #ff6600;
+    --card-bg: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 20px;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 1px solid #222;
+    z-index: 100;
+}
+
+.nav-left a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.nav-left a.active {
+    color: var(--accent);
+}
+
+.nav-right a {
+    margin-left: 15px;
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.nav-right a:hover {
+    color: var(--accent);
+}
+
+/* SECTIONS */
+main {
+    margin-top: 80px;
+}
+
+.section {
+    padding: 80px 10%;
+}
+
+.section h1 {
+    font-size: 4.2rem;
+}
+
+.section h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: var(--accent);
+}
+
+.section h3 {
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    max-width: 700px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+/* CARDS */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card, .skill-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover, .skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* PROJECT EXPAND */
+.expand-btn {
+    margin-top: 10px;
+    background: none;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card-extra {
+    display: none;
+    margin-top: 15px;
+}
+
+.card-extra img {
+    margin-top: 10px;
+}
+
+/* SKILLS */
+.skill-card {
+    text-align: center;
+}
+
+.skill-card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+/* CONTACT FORM */
+#contact {
+    text-align: center;
+    min-height: 100vh;
+    padding-bottom: 120px;
+}
+.contact-form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.contact-form button {
+    align-self: flex-start;
+    background: var(--accent);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    opacity: 0.85;
+}
+
+/* CV BUTTON */
+.cv-btn {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 18px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.cv-btn:hover {
+    background: var(--accent);
+    color: black;
+}
+
+/* COPY EMAIL */
+.email-copy {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.email-copy button {
+    background: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email-copy button:hover {
+    background: var(--accent);
+    color: black;
+}
+
+.card p,
+.skill-card p,
+.contact-form input,
+.contact-form textarea,
+.cv-btn,
+.email-copy span,
+.email-copy button,
+.expand-btn {
+    font-size: 1.1rem;    
+}
+
+.contact-form button,
+.cv-btn,
+.expand-btn,
+.email-copy button {
+    padding: 14px 24px;
+}
+
+@media (max-width: 768px) {
+    .section h1 {
+        font-size: 3rem; 
+    }
+
+    .section h2 {
+        font-size: 2.2rem;
+    }
+
+    .section h3 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .contact-form button,
+    .cv-btn,
+    .expand-btn,
+    .email-copy button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
+
+.skill-card i {
+    font-size: 60px;
+    margin-bottom: 10px;
+}

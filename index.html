@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Francisco Gonzalez Rosabal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="nav-left">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#trajectory" class="nav-link">Trajectory</a>
+        <a href="#contact" class="nav-link">Contact</a>
+
+    </nav>
+
+    <div class="nav-right">
+        <a href="https://www.linkedin.com/in/francisco-gonzalez-r/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:francisco@gonro.com">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+</header>
+
+<main>
+    <!-- HOME -->
+    <section id="home" class="section">
+        <p class="intro">Hi, I’m</p>
+        <h1>Francisco González Rosabal</h1>
+        <p class="subtitle">
+            Robotics & Mechatronics Engineer from Costa Rica. Passionate about intelligent systems,
+            automation, and innovative technical solutions.
+        </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>di.monta</h3>
+                <video autoplay muted loop playsinline>
+                <source src="assets/Gripper Render.mp4" type="video/mp4">
+                </video>
+                <p>Design and protyping of different custom quick change grippers for the disassembling EV battery components.</p>
+
+                <button class="expand-btn">More info</button>
+
+                <div class="card-extra">
+                    <p>Detailed explanation of the project, technologies used, and results.</p>
+                    <img src="project1.jpg" alt="Project image">
+                </div>
+            </div>
+
+            <!-- Duplicate card for more projects -->
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+
+        <div class="card-grid">
+            <div class="skill-card">
+                <i class="devicon-python-plain"></i>
+                <p>Python</p>
+            </div>
+            <div class="skill-card">
+                <i class="devicon-ros-original"></i>
+                <p>ROS 2 </p>
+            </div>
+            <div class="skill-card">
+            <i class="fas fa-cube"></i>
+            <p>3D Mechanical CAD Design</p>
+            </div>
+            <div class="skill-card">
+                <i class="devicon-cplusplus-plain"></i>
+                <p>C++</p>
+            </div>
+            <div class="skill-card">
+                <i class="devicon-arduino-plain"></i>
+                <p>Arduino</p>
+            </div>
+            <div class="skill-card">
+                <i class="devicon-linux-plain"></i>
+                <p>Linux</p>
+            </div>
+            <div class="skill-card">
+                <i class="devicon-git-plain"></i>
+                <p>Git</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-microchip"></i>
+                <p>PLC Programming</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAJECTORY -->
+    <section id="trajectory" class="section">
+        <h2>Trajectory</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <img src="company1.jpg" alt="Company">
+                <h3>Company / Institution</h3>
+                <p>Role and brief description of your experience.</p>
+            </div>
+            <a href="cv/Your_Name_CV.pdf" download class="cv-btn">
+    Download CV
+</a>
+
+        </div>
+    </section>
+
+    <!-- Contact me -->
+    <section id="contact" class="section">
+    <h2>Contact Me</h2>
+
+    <div class="email-copy">
+    <span id="email-text">francisco@gonro.com</span>
+    <button type="button" id="copy-email-btn">Copy email</button>
+    </div>
+
+
+    <form class="contact-form">
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+        <button type="submit">Send message</button>
+    </form>
+</section>
+
+</main>
+
+</body>
+</html>
