@@ -29,11 +29,6 @@ document.querySelectorAll(".expand-btn").forEach(button => {
     });
 });
 
-document.querySelector(".contact-form").addEventListener("submit", e => {
-    e.preventDefault();
-    alert("Message sent (demo). Connect this to a backend or email service.");
-});
-
 document.getElementById("copy-email-btn").addEventListener("click", () => {
     const email = document.getElementById("email-text").textContent;
     navigator.clipboard.writeText(email);
@@ -41,4 +36,37 @@ document.getElementById("copy-email-btn").addEventListener("click", () => {
     const btn = document.getElementById("copy-email-btn");
     btn.textContent = "Copied!";
     setTimeout(() => btn.textContent = "Copy email", 1500);
+});
+
+// Contact form 
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // prevent default redirect
+
+    const data = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            status.textContent = "Message sent successfully!";
+            status.style.color = "var(--accent)";
+            form.reset();
+        } else {
+            const result = await response.json();
+            status.textContent = result.error || "Something went wrong. Please use the mail icon to send the email manually.";
+            status.style.color = "var(--accent)";
+        }
+    } catch (err) {
+        status.textContent = "Network error. Try again later.";
+        status.style.color = "red";
+    }
 });

@@ -88,8 +88,8 @@ main {
 /* CARDS */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr); /* 2 per row */
+    gap: 30px;
 }
 
 .card, .skill-card {
@@ -139,11 +139,26 @@ main {
     margin-bottom: 10px;
 }
 
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 per row */
+    gap: 20px;
+}
+
+.skill-card img,
+.skill-card i {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 auto 10px; /* center and spacing below icon */
+    display: block;
+}
+
 /* CONTACT FORM */
 #contact {
     text-align: center;
-    min-height: 100vh;
-    padding-bottom: 120px;
+    min-height: 90vh;
+    padding-bottom: 100px;
 }
 .contact-form {
     max-width: 600px;
@@ -243,7 +258,7 @@ main {
     padding: 14px 24px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .section h1 {
         font-size: 3rem; 
     }
@@ -271,9 +286,88 @@ main {
         font-size: 1rem;
         padding: 12px 20px;
     }
+    .card-grid {
+    grid-template-columns: 1fr; /* 1 per row */
+    }
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .skill-card i {
     font-size: 60px;
     margin-bottom: 10px;
+}
+
+.card video {
+    width: 100%;
+    border-radius: 8px;
+}
+.card .cv-btn {
+    margin-top: 20px; /* adjust the value as you like */
+    display: inline-block; /* ensures margin works properly */
+}
+.meta{
+    font-size: 0.85rem;          /* smaller than body */
+    color: #aaaaaa;              /* slightly darker than white */
+}
+
+.card-grid > .cv-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+footer {
+    padding: 20px 10%;
+    margin: 0 auto;       
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.contact-skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 20px;
+    max-width: 400px;       /* optional, adjust to fit form width */
+    margin: 20px auto 0;    /* center under form */
+    margin: 70px auto 0;
+}
+
+.contact-skill-card {
+    background: var(--card-bg);
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background 0.3s, color 0.3s;
+    font-weight: 500;
+}
+
+.contact-skill-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-skill-card p {
+    margin: 0;
+}
+
+.contact-skill-card:hover {
+    background: var(--accent);
+    color: black;
+    transform: translateY(-5px);
+}
+
+.contact-skill-card:hover i,
+.contact-skill-card:hover p {
+    color: black; /* ensures icon and text turn black on hover */
 }
