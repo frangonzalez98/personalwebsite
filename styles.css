@@ -258,51 +258,6 @@ main {
     padding: 14px 24px;
 }
 
-@media (max-width: 900px) {
-    .section h1 {
-        font-size: 3rem; 
-    }
-
-    .section h2 {
-        font-size: 2.2rem;
-    }
-
-    .section h3 {
-        font-size: 1.5rem;
-    }
-
-    .subtitle {
-        font-size: 1.3rem;
-    }
-
-    .intro {
-        font-size: 1rem;
-    }
-
-    .contact-form button,
-    .cv-btn,
-    .expand-btn,
-    .email-copy button {
-        font-size: 1rem;
-        padding: 12px 20px;
-    }
-    .card-grid {
-    grid-template-columns: 1fr; /* 1 per row */
-    }
-    .skill-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .nav-left {
-        display: none;  /* hide section links */
-    }
-
-    /* Optional: adjust right icons spacing */
-    .nav-right a {
-        margin-left: 10px;
-        font-size: 1.5rem;
-    }
-}
-
 .skill-card i {
     font-size: 60px;
     margin-bottom: 10px;
@@ -379,4 +334,80 @@ footer {
 .contact-skill-card:hover i,
 .contact-skill-card:hover p {
     color: black; /* ensures icon and text turn black on hover */
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 60px;
+}
+
+/* Image styling */
+.home-image img {
+    width: 300px;
+    height: 384px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: var(--card-bg);
+    transition: transform 0.3s ease;
+    align-items: right;
+}
+
+.home-image img:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 900px) {
+    .section h1 {
+        font-size: 3rem; 
+    }
+
+    .section h2 {
+        font-size: 2.2rem;
+    }
+
+    .section h3 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .contact-form button,
+    .cv-btn,
+    .expand-btn,
+    .email-copy button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+    .card-grid {
+    grid-template-columns: 1fr; /* 1 per row */
+    }
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-left {
+        display: none;  /* hide section links */
+    }
+
+    /* Optional: adjust right icons spacing */
+    .nav-right a {
+        margin-left: 10px;
+        font-size: 1.5rem;
+    }
+    .home-container {
+    flex-direction: column;
+    }
+
+    .home-image img {
+        width: 210px;
+        height: 275px;
+    }
 }
