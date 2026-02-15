@@ -346,12 +346,12 @@ footer {
 /* Image styling */
 .home-image img {
     width: 300px;
-    height: 384px;
+    height: auto;
+    max-height: 384px;
     object-fit: cover;
     border-radius: 12px;
-    background: var(--card-bg);
     transition: transform 0.3s ease;
-    align-items: right;
+    flex-shrink: 0;
 }
 
 .home-image img:hover {
@@ -408,6 +408,7 @@ footer {
 
     .home-image img {
         width: 210px;
-        height: 275px;
+        height: auto;
+        max-height: 275px;
     }
 }
